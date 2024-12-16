@@ -1,0 +1,5 @@
+<Frame defaultPage="views/auth/login-page">
+  <Frame.actionBar>
+    <ActionBar title="doctor.ai" />
+  </Frame.actionBar>
+</Frame>

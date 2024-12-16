@@ -1,0 +1,26 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <ScrollView>
+    <StackLayout class="p-4">
+      <Label text="Symptom Assessment" class="text-xl font-bold mb-4" />
+      <StackLayout class="form">
+        <Label text="How long have you had this condition?" class="mb-2" />
+        <TextField hint="Enter duration" text="{{ duration }}" class="mb-4" />
+        
+        <Label text="Rate the pain level (1-10)" class="mb-2" />
+        <Slider value="{{ painLevel }}" minValue="1" maxValue="10" class="mb-4" />
+        
+        <Label text="Select any additional symptoms:" class="mb-2" />
+        <ListView items="{{ symptoms }}" class="mb-4">
+          <ListView.itemTemplate>
+            <GridLayout columns="auto, *">
+              <CheckBox checked="{{ selected }}" />
+              <Label col="1" text="{{ name }}" />
+            </GridLayout>
+          </ListView.itemTemplate>
+        </ListView>
+        
+        <Button text="Submit" tap="{{ onSubmit }}" class="btn btn-primary" />
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+</Page>

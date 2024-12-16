@@ -1,0 +1,18 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <GridLayout rows="*, auto">
+    <ListView row="0" items="{{ messages }}" class="chat-list">
+      <ListView.itemTemplate>
+        <GridLayout columns="*" class="p-2">
+          <StackLayout class="{{ isUser ? 'bg-blue-500 ml-auto' : 'bg-gray-300' }} p-3 rounded-lg max-w-3/4">
+            <Label text="{{ text }}" textWrap="true" class="{{ isUser ? 'text-white' : 'text-black' }}" />
+          </StackLayout>
+        </GridLayout>
+      </ListView.itemTemplate>
+    </ListView>
+    
+    <GridLayout row="1" columns="*, auto" class="p-2 bg-white">
+      <TextField col="0" hint="Type your message..." text="{{ messageText }}" class="input" />
+      <Button col="1" text="Send" tap="{{ onSendMessage }}" class="btn btn-primary" />
+    </GridLayout>
+  </GridLayout>
+</Page>

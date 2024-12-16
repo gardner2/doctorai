@@ -1,0 +1,8 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <StackLayout class="p-4">
+    <Label text="Skin Analysis" class="text-xl font-bold mb-4" />
+    <Button text="Take Photo" tap="{{ onTakePhoto }}" class="btn btn-primary mb-2" />
+    <Button text="Choose from Gallery" tap="{{ onSelectPhoto }}" class="btn btn-secondary mb-4" />
+    <Image src="{{ capturedImage }}" class="w-full h-64 rounded-lg" stretch="aspectFit" />
+  </StackLayout>
+</Page>
